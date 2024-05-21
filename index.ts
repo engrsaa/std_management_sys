@@ -3,11 +3,13 @@ import inquirer from "inquirer"
 
 
 let condition = true
+let final_select;
+let feepay;
 let std_Enrollment = await inquirer.prompt(
     [
         {
             name: "enroll" ,
-            message: "Enter Your Name \n" , 
+            message: "Enter Your Name" , 
             type: "input"
         }
     ]
@@ -37,7 +39,9 @@ while(condition){
         ]
     )
     //----------------------------------------- Website Designing -------------------------------------------------------------------- 
-    if(selectCourses.courses === "Website Designing"){
+    final_select = selectCourses.courses
+    feepay = feepay
+    if(final_select === "Website Designing"){
         let properties:any = {Duration: "3 months", 
             Coursefee: "4000", 
         Coursedescription: "HTML, CSS & JS"
@@ -586,7 +590,7 @@ while(condition){
     }
 }
 else if(platform.faculty === "Onsite"){
-    let onsiteCourses = await inquirer.prompt(
+    let selectCourses = await inquirer.prompt(
         [
             {
                 name: "courses" , 
@@ -597,7 +601,9 @@ else if(platform.faculty === "Onsite"){
         ]
     )
         //----------------------------------------- Python Programming -----------------------------------------------------------------
-    if(onsiteCourses.courses === "Python Programming"){
+        final_select = selectCourses.courses
+        feepay = feepay
+        if(final_select === "Python Programming"){
         let properties:any = {Duration: "12 months", 
             Coursefee: "8000", 
             Coursedescription: "Basic to Advance of Python Programming"
@@ -732,7 +738,7 @@ else if(platform.faculty === "Onsite"){
         }
     }
         // -------------------------------- English Language ----------------------------------------------------
-       else if(onsiteCourses.courses === "English Language"){
+       else if(selectCourses.courses === "English Language"){
         let properties:any = {
             Duration: "4 months", 
             Coursefee: "2000", 
@@ -869,7 +875,7 @@ else if(platform.faculty === "Onsite"){
      }
 
        // -------------------------------- Freelancing ----------------------------------------------------
-       else if(onsiteCourses.courses === "Freelancing"){
+       else if(selectCourses.courses === "Freelancing"){
         let properties:any = {
             Duration: "6 months", 
             Coursefee: "5500", 
@@ -1006,7 +1012,7 @@ else if(platform.faculty === "Onsite"){
      }
 
      // -------------------------------- MS Office ----------------------------------------------------
-     else if(onsiteCourses.courses === "MS Office"){
+     else if(selectCourses.courses === "MS Office"){
         let properties:any = {
             Duration: "3 months", 
             Coursefee: "2500", 
@@ -1144,7 +1150,8 @@ else if(platform.faculty === "Onsite"){
 
 }
 
-let repeat_ans = await inquirer.prompt(
+
+let repeat_ans:any = await inquirer.prompt(
         {
             name: "ans" , 
             message: "Do you want another course?" , 
@@ -1152,14 +1159,8 @@ let repeat_ans = await inquirer.prompt(
             default: "true",
         }
     )
-    condition = repeat_ans.ans;
-
-//    if(platform.faculty === "Online"){
-//     let user_selection = platform.faculty.Online.selectCourses.course;
-// }
-//     else if(platform.faculty === "Onsite"){
-//         let user_selection = platform.faculty.Onsite.onsiteCourses.courses;
-//     }
-    console.log(chalk.blue(`Details \n${std_Enrollment.enroll}\n${userId}\nYou enrolled in this course ${platform.faculty.Online.course || platform.faculty.Onsite.courses}`));
+    condition = repeat_ans.ans; 
     
+    console.log(chalk.greenBright(`Details \n${std_Enrollment.enroll}\n${userId}\nYou enrolled in our ${final_select} course`));
+   
 }
