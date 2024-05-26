@@ -1,0 +1,842 @@
+first set of comments
+      // let fees = await inquirer.prompt([
+      //   {
+      //     name: "webfee",
+      //     message: "Select Your Payment Criteria",
+      //     type: "list",
+      //     choices: ["Easy Paisa", "Jazz Cash", "Bank Account"],
+      //   },
+      // ]);
+      // ----------------------------------------- EASY PASIA METHOD ----------------------------------------
+      // if (fees.webfee === "Easy Paisa") {
+      //   let getinfoforep = await inquirer.prompt([
+      //     {
+      //       name: "epinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforep.epinfo.length === 11) {
+      //     let payep = await inquirer.prompt([
+      //       {
+      //         name: "eppay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payep.eppay >= properties.Coursefee) {
+      //       let feeamountofweb = payep.eppay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofweb}`);
+      //       feepay = feeamountofweb;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // ---------------------------------- JAZZ CASH METHOD ---------------------------------------------------------
+      // else if (fees.webfee === "Jazz Cash") {
+      //   let getinfoforjz = await inquirer.prompt([
+      //     {
+      //       name: "jzinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforjz.jzinfo.length === 11) {
+      //     let payjz = await inquirer.prompt([
+      //       {
+      //         name: "jzpay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payjz.jzpay >= properties.Coursefee) {
+      //       let feeamountofweb = payjz.jzpay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofweb}`);
+      //       feepay = feeamountofweb;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // ----------------------------------------------BANK ACCOUNT METHOD ------------------------------------------
+      // else if (fees.webfee === "Bank Account") {
+      //   let getinfoforba = await inquirer.prompt([
+      //     {
+      //       name: "bainfo",
+      //       message: "Enter Your Account Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforba.bainfo.length <= 15) {
+      //     let payba = await inquirer.prompt([
+      //       {
+      //         name: "bapay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payba.bapay >= properties.Coursefee) {
+      //       let feeamountofweb = payba.bapay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofweb}`);
+      //       feepay = feeamountofweb;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+second set of comments
+      // let fees = await inquirer.prompt([
+      //   {
+      //     name: "graphicfee",
+      //     message: "Select Your Payment Criteria",
+      //     type: "list",
+      //     choices: ["Easy Paisa", "Jazz Cash", "Bank Account"],
+      //   },
+      // ]);
+      // // ----------------------------------------- EASY PASIA METHOD ----------------------------------------
+      // if (fees.graphicfee === "Easy Paisa") {
+      //   let getinfoforep = await inquirer.prompt([
+      //     {
+      //       name: "epinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforep.epinfo.length === 11) {
+      //     let payep = await inquirer.prompt([
+      //       {
+      //         name: "eppay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payep.eppay >= properties.Coursefee) {
+      //       let feeamountofgraphic = payep.eppay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofgraphic}`);
+      //       feepay = feeamountofgraphic;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // // ---------------------------------- JAZZ CASH METHOD ---------------------------------------------------------
+      // else if (fees.graphicfee === "Jazz Cash") {
+      //   let getinfoforjz = await inquirer.prompt([
+      //     {
+      //       name: "jzinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforjz.jzinfo.length === 11) {
+      //     let payjz = await inquirer.prompt([
+      //       {
+      //         name: "jzpay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payjz.jzpay >= properties.Coursefee) {
+      //       let feeamountofgraphic = payjz.jzpay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofgraphic}`);
+      //       feepay = feeamountofgraphic;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // // ----------------------------------------------BANK ACCOUNT METHOD ------------------------------------------
+      // else if (fees.graphicfee === "Bank Account") {
+      //   let getinfoforba = await inquirer.prompt([
+      //     {
+      //       name: "bainfo",
+      //       message: "Enter Your Account Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforba.bainfo.length <= 15) {
+      //     let payba = await inquirer.prompt([
+      //       {
+      //         name: "bapay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payba.bapay >= properties.Coursefee) {
+      //       let feeamountofgraphic = payba.bapay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofgraphic}`);
+      //       feepay = feeamountofgraphic;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+third set of comments
+      // let fees = await inquirer.prompt([
+      //   {
+      //     name: "marketingfee",
+      //     message: "Select Your Payment Criteria",
+      //     type: "list",
+      //     choices: ["Easy Paisa", "Jazz Cash", "Bank Account"],
+      //   },
+      // ]);
+      // // ----------------------------------------- EASY PASIA METHOD ----------------------------------------
+      // if (fees.marketingfee === "Easy Paisa") {
+      //   let getinfoforep = await inquirer.prompt([
+      //     {
+      //       name: "epinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforep.epinfo.length === 11) {
+      //     let payep = await inquirer.prompt([
+      //       {
+      //         name: "eppay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payep.eppay >= properties.Coursefee) {
+      //       let feeamountofmarketing = payep.eppay - properties.Coursefee;
+      //       console.log(
+      //         `Your balance amount amount is: ${feeamountofmarketing}`
+      //       );
+      //       feepay = feeamountofmarketing;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // // ---------------------------------- JAZZ CASH METHOD ---------------------------------------------------------
+      // else if (fees.marketingfee === "Jazz Cash") {
+      //   let getinfoforjz = await inquirer.prompt([
+      //     {
+      //       name: "jzinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforjz.jzinfo.length === 11) {
+      //     let payjz = await inquirer.prompt([
+      //       {
+      //         name: "jzpay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payjz.jzpay >= properties.Coursefee) {
+      //       let feeamountofmarketing = payjz.jzpay - properties.Coursefee;
+      //       console.log(
+      //         `Your balance amount amount is: ${feeamountofmarketing}`
+      //       );
+      //       feepay = feeamountofmarketing;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // // ----------------------------------------------BANK ACCOUNT METHOD ------------------------------------------
+      // else if (fees.marketingfee === "Bank Account") {
+      //   let getinfoforba = await inquirer.prompt([
+      //     {
+      //       name: "bainfo",
+      //       message: "Enter Your Account Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforba.bainfo.length <= 15) {
+      //     let payba = await inquirer.prompt([
+      //       {
+      //         name: "bapay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payba.bapay >= properties.Coursefee) {
+      //       let feeamountofmarketing = payba.bapay - properties.Coursefee;
+      //       console.log(
+      //         `Your balance amount amount is: ${feeamountofmarketing}`
+      //       );
+      //       feepay = feeamountofmarketing;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+fourth set of comments
+      // let fees = await inquirer.prompt([
+      //   {
+      //     name: "SEOfee",
+      //     message: "Select Your Payment Criteria",
+      //     type: "list",
+      //     choices: ["Easy Paisa", "Jazz Cash", "Bank Account"],
+      //   },
+      // ]);
+      // // ----------------------------------------- EASY PASIA METHOD ----------------------------------------
+      // if (fees.SEOfee === "Easy Paisa") {
+      //   let getinfoforep = await inquirer.prompt([
+      //     {
+      //       name: "epinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforep.epinfo.length === 11) {
+      //     let payep = await inquirer.prompt([
+      //       {
+      //         name: "eppay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payep.eppay >= properties.Coursefee) {
+      //       let feeamountofseo = payep.eppay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofseo}`);
+      //       feepay = feeamountofseo;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // // ---------------------------------- JAZZ CASH METHOD ---------------------------------------------------------
+      // else if (fees.SEOfee === "Jazz Cash") {
+      //   let getinfoforjz = await inquirer.prompt([
+      //     {
+      //       name: "jzinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforjz.jzinfo.length === 11) {
+      //     let payjz = await inquirer.prompt([
+      //       {
+      //         name: "jzpay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payjz.jzpay >= properties.Coursefee) {
+      //       let feeamountofseo = payjz.jzpay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofseo}`);
+      //       feepay = feeamountofseo;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // // ----------------------------------------------BANK ACCOUNT METHOD ------------------------------------------
+      // else if (fees.SEOfee === "Bank Account") {
+      //   let getinfoforba = await inquirer.prompt([
+      //     {
+      //       name: "bainfo",
+      //       message: "Enter Your Account Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforba.bainfo.length <= 15) {
+      //     let payba = await inquirer.prompt([
+      //       {
+      //         name: "bapay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payba.bapay >= properties.Coursefee) {
+      //       let feeamountofseo = payba.bapay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofseo}`);
+      //       feepay = feeamountofseo;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+fifth set of comments
+      // let fees = await inquirer.prompt([
+      //   {
+      //     name: "progfee",
+      //     message: "Select Your Payment Criteria",
+      //     type: "list",
+      //     choices: ["Easy Paisa", "Jazz Cash", "Bank Account"],
+      //   },
+      // ]);
+      // // ----------------------------------------- EASY PASIA METHOD ----------------------------------------
+      // if (fees.progfee === "Easy Paisa") {
+      //   let getinfoforep = await inquirer.prompt([
+      //     {
+      //       name: "epinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforep.epinfo.length === 11) {
+      //     let payep = await inquirer.prompt([
+      //       {
+      //         name: "eppay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payep.eppay >= properties.Coursefee) {
+      //       let feeamountofprog = payep.eppay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofprog}`);
+      //       feepay = feeamountofprog;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // // ---------------------------------- JAZZ CASH METHOD ---------------------------------------------------------
+      // else if (fees.progfee === "Jazz Cash") {
+      //   let getinfoforjz = await inquirer.prompt([
+      //     {
+      //       name: "jzinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforjz.jzinfo.length === 11) {
+      //     let payjz = await inquirer.prompt([
+      //       {
+      //         name: "jzpay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payjz.jzpay >= properties.Coursefee) {
+      //       let feeamountofprog = payjz.jzpay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofprog}`);
+      //       feepay = feeamountofprog;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // // ----------------------------------------------BANK ACCOUNT METHOD ------------------------------------------
+      // else if (fees.progfee === "Bank Account") {
+      //   let getinfoforba = await inquirer.prompt([
+      //     {
+      //       name: "bainfo",
+      //       message: "Enter Your Account Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforba.bainfo.length <= 15) {
+      //     let payba = await inquirer.prompt([
+      //       {
+      //         name: "bapay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payba.bapay >= properties.Coursefee) {
+      //       let feeamountofprog = payba.bapay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofprog}`);
+      //       feepay = feeamountofprog;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+sixth set of comments
+      // let fees = await inquirer.prompt([
+      //   {
+      //     name: "englangfee",
+      //     message: "Select Your Payment Criteria",
+      //     type: "list",
+      //     choices: ["Easy Paisa", "Jazz Cash", "Bank Account"],
+      //   },
+      // ]);
+      // // ----------------------------------------- EASY PASIA METHOD ----------------------------------------
+      // if (fees.englangfee === "Easy Paisa") {
+      //   let getinfoforep = await inquirer.prompt([
+      //     {
+      //       name: "epinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforep.epinfo.length === 11) {
+      //     let payep = await inquirer.prompt([
+      //       {
+      //         name: "eppay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payep.eppay >= properties.Coursefee) {
+      //       let feeamountofenglang = payep.eppay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofenglang}`);
+      //       feepay = feeamountofenglang;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // // ---------------------------------- JAZZ CASH METHOD ---------------------------------------------------------
+      // else if (fees.englangfee === "Jazz Cash") {
+      //   let getinfoforjz = await inquirer.prompt([
+      //     {
+      //       name: "jzinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforjz.jzinfo.length === 11) {
+      //     let payjz = await inquirer.prompt([
+      //       {
+      //         name: "jzpay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payjz.jzpay >= properties.Coursefee) {
+      //       let feeamountofenglang = payjz.jzpay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofenglang}`);
+      //       feepay = feeamountofenglang;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // // ----------------------------------------------BANK ACCOUNT METHOD ------------------------------------------
+      // else if (fees.englangfee === "Bank Account") {
+      //   let getinfoforba = await inquirer.prompt([
+      //     {
+      //       name: "bainfo",
+      //       message: "Enter Your Account Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforba.bainfo.length <= 15) {
+      //     let payba = await inquirer.prompt([
+      //       {
+      //         name: "bapay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payba.bapay >= properties.Coursefee) {
+      //       let feeamountofenglang = payba.bapay - properties.Coursefee;
+      //       console.log(`Your balance amount amount is: ${feeamountofenglang}`);
+      //       feepay = feeamountofenglang;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+seventh set of comments
+      // // let fees = await inquirer.prompt([
+      // //   {
+      // //     name: "freelancingfee",
+      // //     message: "Select Your Payment Criteria",
+      // //     type: "list",
+      // //     choices: ["Easy Paisa", "Jazz Cash", "Bank Account"],
+      // //   },
+      // // ]);
+      // // // ----------------------------------------- EASY PASIA METHOD ----------------------------------------
+      // // if (fees.freelancingfee === "Easy Paisa") {
+      // //   let getinfoforep = await inquirer.prompt([
+      // //     {
+      // //       name: "epinfo",
+      // //       message: "Enter Your Mobile Number",
+      // //       type: "input",
+      // //     },
+      // //   ]);
+
+      // //   if (getinfoforep.epinfo.length === 11) {
+      // //     let payep = await inquirer.prompt([
+      // //       {
+      // //         name: "eppay",
+      // //         message: "Enter Your Amount",
+      // //         type: "input",
+      // //       },
+      // //     ]);
+
+      // //     if (payep.eppay >= properties.Coursefee) {
+      // //       let feeamountoffreelacing = payep.eppay - properties.Coursefee;
+      // //       console.log(
+      // //         `Your balance amount amount is: ${feeamountoffreelacing}`
+      // //       );
+      // //       feepay = feeamountoffreelacing;
+      // //     } else {
+      // //       console.log(`Enter a Valid Amount!`);
+      // //     }
+      // //   } else {
+      // //     console.log(`Enter a Valid Number!`);
+      // //   }
+      // // }
+
+      // // // ---------------------------------- JAZZ CASH METHOD ---------------------------------------------------------
+      // // else if (fees.freelancingfee === "Jazz Cash") {
+      // //   let getinfoforjz = await inquirer.prompt([
+      // //     {
+      // //       name: "jzinfo",
+      // //       message: "Enter Your Mobile Number",
+      // //       type: "input",
+      // //     },
+      // //   ]);
+
+      // //   if (getinfoforjz.jzinfo.length === 11) {
+      // //     let payjz = await inquirer.prompt([
+      // //       {
+      // //         name: "jzpay",
+      // //         message: "Enter Your Amount",
+      // //         type: "input",
+      // //       },
+      // //     ]);
+
+      // //     if (payjz.jzpay >= properties.Coursefee) {
+      // //       let feeamountoffreelacing = payjz.jzpay - properties.Coursefee;
+      // //       console.log(
+      // //         `Your balance amount amount is: ${feeamountoffreelacing}`
+      // //       );
+      // //       feepay = feeamountoffreelacing;
+      // //     } else {
+      // //       console.log(`Enter a Valid Amount!`);
+      // //     }
+      // //   } else {
+      // //     console.log(`Enter a Valid Number!`);
+      // //   }
+      // // }
+
+      // // // ----------------------------------------------BANK ACCOUNT METHOD ------------------------------------------
+      // // else if (fees.freelancingfee === "Bank Account") {
+      // //   let getinfoforba = await inquirer.prompt([
+      // //     {
+      // //       name: "bainfo",
+      // //       message: "Enter Your Account Number",
+      // //       type: "input",
+      // //     },
+      // //   ]);
+
+      // //   if (getinfoforba.bainfo.length <= 15) {
+      // //     let payba = await inquirer.prompt([
+      // //       {
+      // //         name: "bapay",
+      // //         message: "Enter Your Amount",
+      // //         type: "input",
+      // //       },
+      // //     ]);
+
+      // //     if (payba.bapay >= properties.Coursefee) {
+      // //       let feeamountoffreelacing = payba.bapay - properties.Coursefee;
+      // //       console.log(
+      // //         `Your balance amount amount is: ${feeamountoffreelacing}`
+      // //       );
+      // //       feepay = feeamountoffreelacing;
+      // //     } else {
+      // //       console.log(`Enter a Valid Amount!`);
+      // //     }
+      // //   } else {
+      // //     console.log(`Enter a Valid Number!`);
+      // //   }
+      // }
+    
+    eighth set of comments
+          // let fees = await inquirer.prompt([
+      //   {
+      //     name: "MSOfficefee",
+      //     message: "Select Your Payment Criteria",
+      //     type: "list",
+      //     choices: ["Easy Paisa", "Jazz Cash", "Bank Account"],
+      //   },
+      // ]);
+      // // ----------------------------------------- EASY PASIA METHOD ----------------------------------------
+      // if (fees.MSOfficefee === "Easy Paisa") {
+      //   let getinfoforep = await inquirer.prompt([
+      //     {
+      //       name: "epinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforep.epinfo.length === 11) {
+      //     let payep = await inquirer.prompt([
+      //       {
+      //         name: "eppay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //         validate:(input => {
+      //           if(input >= properties.Coursefee){
+      //               return true
+      //           }
+      //           else{
+      //               console.log(`\n Enter ammount`);
+                    
+      //           }
+      //         })
+      //       },
+      //     ]);
+
+      //     if (payep.eppay >= properties.Coursefee) {
+      //       let feeamountofmsoffice = payep.eppay - properties.Coursefee;
+      //       console.log(
+      //         `Your balance amount amount is: ${feeamountofmsoffice}`
+      //       );
+      //       feepay = feeamountofmsoffice;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // // ---------------------------------- JAZZ CASH METHOD ---------------------------------------------------------
+      // else if (fees.MSOfficefee === "Jazz Cash") {
+      //   let getinfoforjz = await inquirer.prompt([
+      //     {
+      //       name: "jzinfo",
+      //       message: "Enter Your Mobile Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforjz.jzinfo.length === 11) {
+      //     let payjz = await inquirer.prompt([
+      //       {
+      //         name: "jzpay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payjz.jzpay >= properties.Coursefee) {
+      //       let feeamountofmsoffice = payjz.jzpay - properties.Coursefee;
+      //       console.log(
+      //         `Your balance amount amount is: ${feeamountofmsoffice}`
+      //       );
+      //       feepay = feeamountofmsoffice;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
+
+      // // ----------------------------------------------BANK ACCOUNT METHOD ------------------------------------------
+      // else if (fees.MSOfficefee === "Bank Account") {
+      //   let getinfoforba = await inquirer.prompt([
+      //     {
+      //       name: "bainfo",
+      //       message: "Enter Your Account Number",
+      //       type: "input",
+      //     },
+      //   ]);
+
+      //   if (getinfoforba.bainfo.length <= 15) {
+      //     let payba = await inquirer.prompt([
+      //       {
+      //         name: "bapay",
+      //         message: "Enter Your Amount",
+      //         type: "input",
+      //       },
+      //     ]);
+
+      //     if (payba.bapay >= properties.Coursefee) {
+      //       let feeamountofmsoffice = payba.bapay - properties.Coursefee;
+      //       console.log(
+      //         `Your balance amount amount is: ${feeamountofmsoffice}`
+      //       );
+      //       feepay = feeamountofmsoffice;
+      //     } else {
+      //       console.log(`Enter a Valid Amount!`);
+      //     }
+      //   } else {
+      //     console.log(`Enter a Valid Number!`);
+      //   }
+      // }
